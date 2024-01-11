@@ -1,0 +1,10 @@
+11-01-2024 09:40:46	This log contains information about the import schema operation into project 'EmployeeDBProj' on computer 'DESKTOP-JH9JP1C' by user 'Afiya'.
+11-01-2024 09:40:46	Deserializing model
+11-01-2024 09:40:47	Resolving model
+11-01-2024 09:40:47	Visiting imported model for types
+11-01-2024 09:40:47	Scanning project for duplicate elements
+11-01-2024 09:40:47	Finished duplicate element processing
+11-01-2024 09:40:47	Processing extra files
+11-01-2024 09:40:47	Finished importing Data-tier Application file.
+11-01-2024 09:40:47	A summary of the import was saved to the following location: C:\DotnetProjects\EmployeeDBProj\Import Schema Logs\EmployeeDBProj_20240111041046.log
+11-01-2024 09:40:47	Click Finish to continue...
