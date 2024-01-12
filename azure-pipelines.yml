@@ -1,3 +1,9 @@
+
+name: webAPI_$(Date:yyyyMMdd)$(Rev:.r)
+trigger:
+- main
+pool:
+  name: Default
 variables:
   solution: '**\*.sln'
 
