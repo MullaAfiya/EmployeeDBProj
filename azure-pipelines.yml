@@ -1,4 +1,3 @@
-
 name: EmployeeDB_$(Date:yyyyMMdd)$(Rev:.r)
 trigger:
 - main
@@ -7,6 +6,11 @@ pool:
 variables:
 - name: BuildParameters.solution
   value: '**\*.sln'
+- name: BuildPlatform
+  value: 'Any CPU'
+- name: BuildConfiguration
+  value: 'Release'
+
 resources:
   repositories:
   - repository: self
@@ -17,7 +21,7 @@ steps:
     clean: true
     fetchTags: false
   - task: VSBuild@1
-    displayName: Build solution **\*.sln
+    displayName: 'Build solution **\*.sln'
     inputs:
       solution: $(BuildParameters.solution)
       platform: $(BuildPlatform)
