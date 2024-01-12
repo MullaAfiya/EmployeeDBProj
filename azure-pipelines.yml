@@ -13,8 +13,6 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
- 
-
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
@@ -25,6 +23,12 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.BinariesDirectory)' # Adjust the source folder based on your project structure
+    Contents: '**' # Adjust as needed
+    TargetFolder: 'C:\AzureDB' # Destination folder
 
 - task: PublishBuildArtifacts@1
   inputs:
