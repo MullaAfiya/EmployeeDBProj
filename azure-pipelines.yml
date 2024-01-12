@@ -6,15 +6,16 @@ pool:
   name: Default
 variables:
   solution: '**\*.sln'
-
+  BuildConfiguration: 'Release'
 steps:
+
+#Your build pipeline references an undefined variable named ‘BuildConfiguration’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 - task: VSBuild@1
   displayName: 'Build solution **\*.sln'
   inputs:
-    solution: '$(Parameters.solution)'
+    solution: '$(solution)'
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
-#Your build pipeline references an undefined variable named ‘BuildConfiguration’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
